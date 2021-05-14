@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Share Window</title>
+</head>
+<body>
+    <div class="button">
+        <button onclick="Open();">Share</button>
+    </div>
+    <div class="popup" id="popup">
+        <div class="close">
+            <i class="fas fa-times" onclick="Open();"></i>
+        </div>
+        <h1>Share</h1>
+        <div class="icons">
+            <div class="embed">
+                <i class="fas fa-code"></i><br>
+                <span>Embed</span>
+            </div>
+            <div class="facebook">
+                <i class="fab fa-facebook"></i><br>
+                <span>Facebook</span>
+            </div>
+            <div class="twitter">
+                <i class="fab fa-twitter"></i><br>
+                <span>Twitter</span>
+            </div>
+            <div class="whatsapp">
+                <i class="fab fa-whatsapp"></i><br>
+                <span>Whatsapp</span>
+            </div>
+            <div class="email">
+                <i class="fas fa-envelope"></i><br>
+                <span>Email</span>
+            </div>
+        </div>
+        <div class="copylink">
+            <h3>Copy Link</h3>
+            <input type="text" name="link" id="link" readonly value="example.com/45Dhvw">
+            <i class="far fa-copy" title="Copy Link In Clipboard"></i>
+        </div>
+    </div>
+</body>
+<script>
+    function Open()
+    {
+        let popup=document.getElementById('popup');
+        popup.classList.toggle('active');
+    }
+</script>
+</html>
